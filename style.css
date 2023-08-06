@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #30475E;
+    color: white;
+    position: relative;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.343);
+}
+
+.logo {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.card-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 0.2fr));
+    grid-auto-rows: min-content;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.343);
+}
+
+.info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+    background-color: #222831;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    background-color: #30475E;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card>div:not(.title) {
+    font-size: small;
+    font-weight: bold;
+}
+
+.card-button-container>button {
+    background-color: #222831;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+}
+
+.button-container>button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: white;
+    border: 2px solid white;
+    background-color: #30475E;
+}
+
+.card-button-container>button:hover, .button-container>button:hover {
+    border-color: #F05454;
+    color: #F05454;
+}
+
+.card-button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+span {
+    font-weight: initial;
+}
+
+main, footer {
+    background-color: #DDDDDD;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    position: fixed;
+    top: calc(10% - 15px);
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: white;
+    height: 40%;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 15px;
+    display: none;
+}
+
+form>div:not(:last-of-type) {
+    display: grid;
+    align-items: center;
+    grid-template-rows: min-content min-content;
+    gap: 2px;
+}
+
+label {
+    font-weight: 500;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline-color: #F05454;
+}
+
+form>button {
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+    background-color: white;
+}
+
+form>button:hover {
+    border-color: #F05454;
+    color: #F05454;
+}
+
+form>:first-child {
+    justify-self: center;
+    font-size: large;
+    font-weight: bold;
+}

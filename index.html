@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/book.svg">
+    <title>Library</title>
+
+    <style>
+        #githubIcon {
+            max-width: 25px;
+            height: auto;
+            transition: all .2s ease-in-out;
+        }
+
+        #githubIcon:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return false">
+        <div>New Book</div>
+
+        <div>
+            <label for="title">Title: </label>
+            <input type="text" name="title" id="title" autocomplete="off" required>
+        </div>
+        
+        <div>
+            <label for="author">Author: </label>
+            <input type="text" name="author" id="author" autocomplete="off" required>
+        </div>
+        
+        <div>
+            <label for="pages">Pages: </label>
+            <input type="number" name="pages" id="pages" required min="1">
+        </div>
+        
+        <div>
+            <label for="status">Completed</label>
+            <input type="checkbox" name="status" id="status">
+        </div>
+
+        <button type="submit">Add</button>
+    </form>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div>Library</div>
+            </div>
+            <div class="button-container">
+                <button title="Add new book">+</button>
+            </div>
+        </header>
+        <main>
+            <div class="card-container">
+                
+            </div>
+        </main>
+        <footer style="display: flex; text-align: center; flex-wrap: wrap; gap: 2px; justify-content: center; align-items: center; line-height: 0;">
+            <span class="copyright"></span>
+            <span class="icon">
+                <a href="https://github.com/TITANIUM339" target="_blank"><img id="githubIcon" src="./images/github.svg" alt="github"></a>
+            </span>
+        </footer>
+    </div>
+    
+    <script>
+        document.querySelector(".copyright").innerHTML = `Copyright &#169; TITANIUM339 ${new Date().getFullYear()}`;
+    </script>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
